@@ -1,18 +1,64 @@
+
 var bubbles = [];
 
 var updateAndDisplay = function(bubble) {
   bubble.update();
   bubble.display();
-}
-
-var setup = function () {
-  createCanvas(700, 700);
-  // your code goes here
 };
 
-var draw = function () {
+var addNumberBubbles = function (totalBubbles) {
+  for (var i = 0; i < totalBubbles; ++i) {
+    bubbles[i] = new Bubble(random(0, width), random(0, height));
+  }
+};
+
+setup = function () {
+  createCanvas(600, 600);
+  addNumberBubbles(500);
+
+};
+
+draw = function () {
   background(0);
-  // your code goes here
   bubbles.forEach(updateAndDisplay);
-  if (mouseIsPressed) bubbles.push(new Bubble(mouseX, mouseY));
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Notes for comparison
+
+
+var bubbles = [];
+
+var updateAndDisplay = function(bubble) {
+  bubble.update();
+  bubble.display();
+};
+
+var addNumberBubbles = function (totalBubbles) {
+  for (var i = 0; i < totalBubbles; ++i) {
+    bubbles[i] = new Bubble(random(0, width), random(0, height));
+  }
+};
+
+setup = function () {
+  createCanvas(600, 600);
+  addNumberBubbles(500);
+};
+
+draw = function () {
+  background(0);
+  bubbles.forEach(updateAndDisplay);
+
+*/
