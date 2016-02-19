@@ -13,20 +13,14 @@ var addNumberBubbles = function (totalBubbles) {
 
 setup = function () {
   createCanvas(600, 600);
-  // your code goes here
   addNumberBubbles(500);
+
 };
 
 draw = function () {
   background(0);
-
   bubbles.forEach(updateAndDisplay);
 };
-  // your code goes here
-
-
-    //bubbles[index].update();
-    //bubbles[index].draw();
 
 
 /* -- using while loop
